@@ -4,7 +4,7 @@ Tools: MSSQL, Power BI
 ===============================================================
 */
 
---Question 1: Total Sessions, Total Orders, and Conversion Rate (Order/Session)
+-- Total Sessions, Total Orders, and Conversion Rate (Order/Session)
 SELECT COUNT(website_session_id) AS total_sessions
 FROM website_sessions
 
@@ -18,7 +18,7 @@ SELECT
 FROM website_sessions ws 
  LEFT JOIN orders o ON ws.website_session_id = o.website_session_id
 
--- Q2: Session Count by UTM Source (Traffic volume by channel)
+-- Session Count by UTM Source (Traffic volume by channel)
 SELECT 
  utm_source, 
  COUNT(website_session_id) AS total_sessions
@@ -27,7 +27,7 @@ GROUP BY utm_source
 ORDER BY 2 DESC
 
 
--- Q3: Device Type Distribution (Percentage of total sessions per device)
+-- Device Type Distribution (Percentage of total sessions per device)
 SELECT 
  device_type,
  COUNT(website_session_id) AS total_sessions,
@@ -35,7 +35,7 @@ SELECT
 FROM website_sessions
 GROUP BY device_type
 
--- Q4: Top 10 Most Visited URLs
+-- Top 10 Most Visited URLs
 SELECT
 TOP 10 pageview_url,
 COUNT (*) AS views
@@ -43,14 +43,14 @@ FROM website_pageviews
 GROUP BY pageview_url
 ORDER BY 2 DESC
 
--- Q5: Total Gross Revenue, Total COGS, and Gross Margin Percentage
+-- Total Gross Revenue, Total COGS, and Gross Margin Percentage
 SELECT
  SUM(price_usd) AS gross_revenue,
  SUM(cogs_usd) AS total_cost,
 (SUM(price_usd) - SUM(cogs_usd))*100.0/SUM(price_usd) AS margin
 FROM orders
 
--- Q6: Conversion Rate by UTM Source (Identifying high-quality traffic sources)
+-- Conversion Rate by UTM Source (Identifying high-quality traffic sources)
 SELECT
 utm_source,
 COUNT (ws.website_session_id) AS total_visit,
@@ -62,7 +62,7 @@ FROM website_sessions ws
 GROUP BY utm_source
 ORDER BY 4 DESC
 
---Q7: Refund Rate per Product (Total items returned vs. items sold and revenue impact)
+-- Refund Rate per Product (Total items returned vs. items sold and revenue impact)
 SELECT
     product_id,
     product_name,
@@ -76,7 +76,7 @@ FROM orders o
 GROUP BY product_name, product_id
 ORDER BY 3 DESC
 
---Q8: Full Conversion Funnel Analysis: Tracking session flow from Homepage → Product → Cart → Shipping → Payment → Thank You
+-- Full Conversion Funnel Analysis: Tracking session flow from Homepage → Product → Cart → Shipping → Payment → Thank You
 WITH funnel AS (
     SELECT 
         ws.website_session_id,
@@ -125,7 +125,7 @@ UNPIVOT (
     )
 ) AS unpvt;
 
---Q9:  Total Revenue Contribution by Device Type.
+-- Total Revenue Contribution by Device Type.
 SELECT device_type,
 SUM(price_usd * items_purchased) AS revenue
 FROM website_sessions ws 
@@ -133,7 +133,7 @@ FROM website_sessions ws
  ON ws.website_session_id=o.website_session_id
 GROUP BY device_type
 
---Q10: Retention Analysis by UTM Campaign: Comparing unique users vs. repeat sessions to evaluate campaign loyalty
+-- Retention Analysis by UTM Campaign: Comparing unique users vs. repeat sessions to evaluate campaign loyalty
 SELECT 
 utm_campaign,
 COUNT(DISTINCT user_id) AS total_unique_user,
