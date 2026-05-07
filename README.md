@@ -28,11 +28,13 @@ The goal is to analyze website performance, marketing channel efficiency, and pr
 <img width="1306" height="740" alt="dashboard_sessions" src="https://github.com/user-attachments/assets/411dbbff-b2ae-486f-ad88-8a0bbb830bb9" />
 
 ### Marketing & Traffic Performance
-- Gsearch remains the dominant traffic driver. 
-However, desktop sessions peaked in 2014 at 0.43M and showed a slight decline in 2015, indicating a need for channel diversification (e.g., Bsearch, Social).
+- **Gsearch** is the most important channel. It brings the highest number of visitors to our website.
+- **Desktop sessions** were very high in 2014 **(0.43M)**. But in 2015, this number started to go down a little bit.
+- We should not only focus on Gsearch. We need to try other channels like **Social Media** or **Bsearch **to get more customers.
+
 ### Conversion Funnel Analysis
-- **Critical Drop-off**: We identified a significant ~45% loss between the Homepage and the Product Page.  
-- **Actionable Insight**: Optimization is required for landing page relevance or site speed to retain users early in the journey.
+- **Issue**: Many people (45%) leave the website right after the Homepage. They do not go to the Product Page. Maybe the Homepage is slow or the information is not interesting enough to keep them.
+- **Action**: We need to make the Homepage better and faster. This will help more people stay and buy our products.
 
 ### Financials & Product Mix
 <img width="1310" height="751" alt="dashboard_product" src="https://github.com/user-attachments/assets/9991be6f-a0f5-4a23-a785-35f366961b63" />
