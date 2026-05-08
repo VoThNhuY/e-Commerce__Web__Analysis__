@@ -29,8 +29,8 @@ The goal is to analyze website performance, marketing channel efficiency, and pr
 
 ### Marketing & Traffic Performance
 - **Gsearch** is the most important channel. It brings the highest number of visitors to our website.
-- **Desktop sessions** were very high in 2014 **(0.43M)**. But in 2015, this number started to go down a little bit.
-- We should not only focus on Gsearch. We need to try other channels like **Social Media** or **Bsearch **to get more customers.
+- **Desktop sessions** were very high in 2014 **(0.43M)**. But in 2015, this number started to decline slightly.
+- We should not only focus on Gsearch. We need to try other channels, such as **Social Media** or **Bsearch**, to attract more customers.
 
 ### Conversion Funnel Analysis
 - **Issue**: Many people (45%) leave the website right after the Homepage. They do not go to the Product Page. Maybe the Homepage is slow or the information is not interesting enough to keep them.
