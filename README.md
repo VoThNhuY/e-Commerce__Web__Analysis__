@@ -43,7 +43,7 @@ The goal is to analyze website performance, marketing channel efficiency, and pr
 - **Profitability**: Maintained a strong 61.02% Margin
 - **Quality Control**: Despite high in sales, "Mr. Fuzzy" has the highest absolute refund volume (68.1K), requiring a quality audit.
 
-## 🛠 Technical Skills Demonstrated
+## 🛠 Technical
 1. **Database:** MSSQL
 2. **Tool:** Azure Data Studio, Power BI (for Visualization)
 3. **SQL Techniques:** Advanced Joins, CTEs (Common Table Expressions), Aggregate Functions
